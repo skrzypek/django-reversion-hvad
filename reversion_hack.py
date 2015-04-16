@@ -40,7 +40,7 @@ class TranslatableVersionAdmin(reversion.VersionAdmin):
 
     def save_model(self, request, obj, form, change):
         if not hasattr(self, 'model'):
-            raise AttributeError("You have to specified 'model', attr")
+            raise AttributeError("You need to specify 'model', attr")
 
         serialized = serializers.serialize(
             'json',
